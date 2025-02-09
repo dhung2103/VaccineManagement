@@ -21,19 +21,6 @@ namespace VaccineManagement
             InitializeComponent();
             _serviceProvider = serviceProvider;
             _context = context;
-
-            this.Closing += MainWindow_Closing;
-        }
-
-        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            var result = DXMessageBox.Show("Bạn có chắc chắn muốn thoát?", "Xác nhận",
-                                       MessageBoxButton.YesNo, MessageBoxImage.Warning);
-
-            if (result == MessageBoxResult.No)
-            {
-                e.Cancel = true;
-            }
         }
 
         private async void LoginButton_Click(object sender, RoutedEventArgs e)

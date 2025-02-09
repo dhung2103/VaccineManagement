@@ -1,0 +1,62 @@
+﻿<Window xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+        x:Class="VaccineManagement.UserViewControl.VaccineView.VaccinePageEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        xmlns:ViewModels="clr-namespace:VaccineManagement.UserViewControl.VaccineView"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        d:DataContext="{d:DesignInstance Type=ViewModels:VaccinePageViewModel}"
+        mc:Ignorable="d" Background="White"
+        HorizontalAlignment="Center" VerticalAlignment="Center"
+        Width="680" Height="260">
+
+    <dxlc:LayoutControl Orientation="Vertical" Padding="16">
+        <dxlc:LayoutGroup Orientation="Vertical" Header="Thông tin vaccine" >
+            <dxlc:LayoutGroup Orientation="Horizontal" ItemSpace="10" Margin="0,0,0,10">
+                <dxlc:LayoutGroup Orientation="Vertical" Width="300">
+                    <dxlc:LayoutItem Label="Tên vaccine" AddColonToLabel="True" IsRequired="True">
+                        <dxe:TextEdit EditValue="{Binding Path=Vaccine.Name, ValidatesOnDataErrors=True, Mode=TwoWay}" MaxLength="100" />
+                    </dxlc:LayoutItem>
+
+                    <dxlc:LayoutItem Label="Nhà sản xuất" AddColonToLabel="True">
+                        <dxe:TextEdit EditValue="{Binding Path=Vaccine.Manufacturer, Mode=TwoWay}" MaxLength="200"/>
+                    </dxlc:LayoutItem>
+
+                    <dxlc:LayoutItem Label="Mô tả" AddColonToLabel="True">
+                        <dxe:MemoEdit EditValue="{Binding Path=Vaccine.Description, Mode=TwoWay}" VerticalScrollBarVisibility="Auto"/>
+                    </dxlc:LayoutItem>
+
+                    <dxlc:LayoutItem Label="Độ tuổi tối thiểu (tháng)" AddColonToLabel="True">
+                        <dxe:SpinEdit EditValue="{Binding Path=Vaccine.MinAgeMonths, Mode=TwoWay, TargetNullValue=0}" MinValue="0" MaxValue="1200"/>
+                    </dxlc:LayoutItem>
+
+                    <dxlc:LayoutItem Label="Độ tuổi tối đa (tháng)" AddColonToLabel="True">
+                        <dxe:SpinEdit EditValue="{Binding Path=Vaccine.MaxAgeMonths, Mode=TwoWay, TargetNullValue=0}" MinValue="0" MaxValue="1200"/>
+                    </dxlc:LayoutItem>
+                </dxlc:LayoutGroup>
+
+                <dxlc:LayoutGroup Orientation="Vertical" Width="300">
+                    <dxlc:LayoutItem Label="Thông tin liều lượng" AddColonToLabel="True">
+                        <dxe:TextEdit EditValue="{Binding Path=Vaccine.DosageInfo, Mode=TwoWay}" MaxLength="200"/>
+                    </dxlc:LayoutItem>
+
+                    <dxlc:LayoutItem Label="Giá" AddColonToLabel="True">
+                        <dxe:SpinEdit EditValue="{Binding Path=Vaccine.Price, Mode=TwoWay}" MinValue="0" MaxValue="1000000"/>
+                    </dxlc:LayoutItem>
+
+                    <dxlc:LayoutItem Label="Trạng thái" AddColonToLabel="True">
+                        <dxe:CheckEdit IsChecked="{Binding Path=Vaccine.IsActive, Mode=TwoWay}" Content="Hoạt động" />
+                    </dxlc:LayoutItem>
+                </dxlc:LayoutGroup>
+            </dxlc:LayoutGroup>
+
+            <dxlc:LayoutGroup Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+                <dx:SimpleButton Content="Lưu" Command="{Binding Path=SaveCommand}" Width="100" Height="30" Margin="0,0,0,0" />
+            </dxlc:LayoutGroup>
+        </dxlc:LayoutGroup>
+    </dxlc:LayoutControl>
+</Window>

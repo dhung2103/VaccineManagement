@@ -70,10 +70,12 @@
             // 
             this.gridControl.DataSource = this.entityInstantFeedbackSource1;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.Location = new System.Drawing.Point(0, 24);
+            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gridControl.Location = new System.Drawing.Point(0, 40);
             this.gridControl.MainView = this.gridView;
+            this.gridControl.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(800, 576);
+            this.gridControl.Size = new System.Drawing.Size(1333, 1022);
             this.gridControl.TabIndex = 2;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -102,6 +104,7 @@
             this.colVaccinationRecords,
             this.colCreatedAt,
             this.colUpdatedAt});
+            this.gridView.DetailHeight = 619;
             this.gridView.GridControl = this.gridControl;
             this.gridView.Name = "gridView";
             this.gridView.OptionsBehavior.Editable = false;
@@ -111,100 +114,128 @@
             // colChildId
             // 
             this.colChildId.FieldName = "ChildId";
+            this.colChildId.MinWidth = 33;
             this.colChildId.Name = "colChildId";
             this.colChildId.Visible = true;
             this.colChildId.VisibleIndex = 0;
+            this.colChildId.Width = 125;
             // 
             // colFullName
             // 
             this.colFullName.FieldName = "FullName";
+            this.colFullName.MinWidth = 33;
             this.colFullName.Name = "colFullName";
             this.colFullName.Visible = true;
             this.colFullName.VisibleIndex = 1;
+            this.colFullName.Width = 125;
             // 
             // colDateOfBirth
             // 
             this.colDateOfBirth.FieldName = "DateOfBirth";
+            this.colDateOfBirth.MinWidth = 33;
             this.colDateOfBirth.Name = "colDateOfBirth";
             this.colDateOfBirth.Visible = true;
             this.colDateOfBirth.VisibleIndex = 2;
+            this.colDateOfBirth.Width = 125;
             // 
             // colGender
             // 
             this.colGender.FieldName = "Gender";
+            this.colGender.MinWidth = 33;
             this.colGender.Name = "colGender";
             this.colGender.Visible = true;
             this.colGender.VisibleIndex = 3;
+            this.colGender.Width = 125;
             // 
             // colBloodType
             // 
             this.colBloodType.FieldName = "BloodType";
+            this.colBloodType.MinWidth = 33;
             this.colBloodType.Name = "colBloodType";
             this.colBloodType.Visible = true;
             this.colBloodType.VisibleIndex = 4;
+            this.colBloodType.Width = 125;
             // 
             // colParentName
             // 
             this.colParentName.FieldName = "ParentName";
+            this.colParentName.MinWidth = 33;
             this.colParentName.Name = "colParentName";
             this.colParentName.Visible = true;
             this.colParentName.VisibleIndex = 5;
+            this.colParentName.Width = 125;
             // 
             // colParentPhone
             // 
             this.colParentPhone.FieldName = "ParentPhone";
+            this.colParentPhone.MinWidth = 33;
             this.colParentPhone.Name = "colParentPhone";
             this.colParentPhone.Visible = true;
             this.colParentPhone.VisibleIndex = 6;
+            this.colParentPhone.Width = 125;
             // 
             // colAddress
             // 
             this.colAddress.FieldName = "Address";
+            this.colAddress.MinWidth = 33;
             this.colAddress.Name = "colAddress";
             this.colAddress.Visible = true;
             this.colAddress.VisibleIndex = 7;
+            this.colAddress.Width = 125;
             // 
             // colHealthNotes
             // 
             this.colHealthNotes.FieldName = "HealthNotes";
+            this.colHealthNotes.MinWidth = 33;
             this.colHealthNotes.Name = "colHealthNotes";
             this.colHealthNotes.Visible = true;
             this.colHealthNotes.VisibleIndex = 8;
+            this.colHealthNotes.Width = 125;
             // 
             // colCreatedBy
             // 
             this.colCreatedBy.FieldName = "CreatedBy";
+            this.colCreatedBy.MinWidth = 33;
             this.colCreatedBy.Name = "colCreatedBy";
             this.colCreatedBy.Visible = true;
             this.colCreatedBy.VisibleIndex = 9;
+            this.colCreatedBy.Width = 125;
             // 
             // colCreatedByStaff
             // 
             this.colCreatedByStaff.FieldName = "CreatedByStaff";
+            this.colCreatedByStaff.MinWidth = 33;
             this.colCreatedByStaff.Name = "colCreatedByStaff";
             this.colCreatedByStaff.Visible = true;
             this.colCreatedByStaff.VisibleIndex = 10;
+            this.colCreatedByStaff.Width = 125;
             // 
             // colVaccinationRecords
             // 
             this.colVaccinationRecords.FieldName = "VaccinationRecords";
+            this.colVaccinationRecords.MinWidth = 33;
             this.colVaccinationRecords.Name = "colVaccinationRecords";
             this.colVaccinationRecords.Visible = true;
             this.colVaccinationRecords.VisibleIndex = 11;
+            this.colVaccinationRecords.Width = 125;
             // 
             // colCreatedAt
             // 
             this.colCreatedAt.FieldName = "CreatedAt";
+            this.colCreatedAt.MinWidth = 33;
             this.colCreatedAt.Name = "colCreatedAt";
             this.colCreatedAt.Visible = true;
             this.colCreatedAt.VisibleIndex = 12;
+            this.colCreatedAt.Width = 125;
             // 
             // colUpdatedAt
             // 
             this.colUpdatedAt.FieldName = "UpdatedAt";
+            this.colUpdatedAt.MinWidth = 33;
             this.colUpdatedAt.Name = "colUpdatedAt";
             this.colUpdatedAt.Visible = true;
             this.colUpdatedAt.VisibleIndex = 13;
+            this.colUpdatedAt.Width = 125;
             // 
             // barManager1
             // 
@@ -222,7 +253,7 @@
             this.btnRefresh,
             this.btnView,
             this.btnInject});
-            this.barManager1.MaxItemId = 7;
+            this.barManager1.MaxItemId = 8;
             // 
             // bar4
             // 
@@ -297,31 +328,35 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(800, 24);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.barDockControlTop.Size = new System.Drawing.Size(1333, 40);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 600);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 1062);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(800, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1333, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 40);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 576);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 1022);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(800, 24);
+            this.barDockControlRight.Location = new System.Drawing.Point(1333, 40);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 576);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 1022);
             // 
             // bar3
             // 
@@ -362,15 +397,16 @@
             // 
             // ChildrenPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gridControl);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "ChildrenPage";
-            this.Size = new System.Drawing.Size(800, 600);
+            this.Size = new System.Drawing.Size(1333, 1062);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();

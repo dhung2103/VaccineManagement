@@ -21,6 +21,7 @@ namespace VaccineManagement.Model
 
         [Required]
         [Display(Name = "Ngày sinh")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DateOfBirth { get; set; }
 
         [Required, MaxLength(10)]

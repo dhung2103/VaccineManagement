@@ -102,7 +102,7 @@
                 </dxlc:LayoutItem>
 
                 <dxlc:LayoutItem Label="Thời gian tiêm:">
-                    <dxe:DateEdit EditValue="{Binding VaccinationRecord.AdministeredDate, UpdateSourceTrigger=PropertyChanged}" />
+                    <dxe:DateEdit Mask="dd/MM/yyyy" MaskUseAsDisplayFormat="True" DateTime="{Binding VaccinationRecord.AdministeredDate, UpdateSourceTrigger=PropertyChanged}" />
                 </dxlc:LayoutItem>
 
                 <dxlc:LayoutItem Label="Số lô vaccine:">
@@ -110,7 +110,7 @@
                 </dxlc:LayoutItem>
 
                 <dxlc:LayoutItem Label="Hạn sử dụng:">
-                    <dxe:DateEdit EditValue="{Binding VaccinationRecord.ExpiryDate, UpdateSourceTrigger=PropertyChanged}"/>
+                    <dxe:DateEdit Mask="dd/MM/yyyy" MaskUseAsDisplayFormat="True" DateTime="{Binding VaccinationRecord.ExpiryDate, UpdateSourceTrigger=PropertyChanged}" />
                 </dxlc:LayoutItem>
 
                 <dxlc:LayoutItem Label="Vị trí tiêm:">

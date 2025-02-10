@@ -56,6 +56,7 @@ namespace VaccineManagement.Model
         /// Thời điểm tiêm
         /// </summary>
         [Display(Name = "Thời gian tiêm")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime? AdministeredDate { get; set; }
 
         /// <summary>
@@ -68,6 +69,7 @@ namespace VaccineManagement.Model
         /// Hạn sử dụng vaccine
         /// </summary>
         [Display(Name = "Hạn sử dụng")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime? ExpiryDate { get; set; }
 
         /// <summary>
@@ -85,6 +87,7 @@ namespace VaccineManagement.Model
         public string Notes { get; set; } = string.Empty;
 
         [Display(Name = "Ngày tạo")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime? CreatedAt { get; set; } = DateTime.Now;
     }
 }

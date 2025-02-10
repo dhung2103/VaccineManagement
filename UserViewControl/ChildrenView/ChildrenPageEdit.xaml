@@ -25,7 +25,7 @@
                         </dxlc:LayoutItem>
                         <dxlc:LayoutGroup Orientation="Horizontal" ItemSpace="12">
                             <dxlc:LayoutItem Label="Ngày sinh" AddColonToLabel="True" IsRequired="True">
-                                <dxe:DateEdit EditValue="{Binding Path=Children.DateOfBirth, Mode=TwoWay}" IsReadOnly="{Binding IsViewMode}"/>
+                                <dxe:DateEdit Mask="dd/MM/yyyy" MaskUseAsDisplayFormat="True" DateTime="{Binding Path=Children.DateOfBirth, Mode=TwoWay}" IsReadOnly="{Binding IsViewMode}" />
                             </dxlc:LayoutItem>
 
                             <dxlc:LayoutItem Label="Giới tính" HorizontalAlignment="Right" AddColonToLabel="True" IsRequired="True">
